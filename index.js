@@ -1,1 +1,10 @@
 let content = document.querySelector('.js-generated.content')
+let header = document.createElement('h1')
+header.setAttribute('class', 'dog-name')
+header.append('Rizzo')
+content.append(header)
+
+let header2 = document.createElement('h2')
+header2.setAttribute('class', 'dog-details')
+header2.append('Description')
+content.append(header2)
