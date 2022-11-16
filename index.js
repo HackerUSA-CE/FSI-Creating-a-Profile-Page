@@ -8,23 +8,46 @@ content.append(header)
 
 let dogContent = document.createElement('div')
 dogContent.setAttribute('class', 'dog-content')
-content.append(dogContent)
-
-
 
 let dogImage = document.createElement('img')
 dogImage.setAttribute('class', 'dog-image')
 dogImage.setAttribute('src', './assets/rizzo.jpg')
-content.append(dogImage)
+dogContent.append(dogImage)
 
-let description = document.createElement('h3')
-description.setAttribute('class', 'description')
-description.append('Description')
-content.append(description)
+let details = document.createElement('div')
+details.setAttribute('class', 'dog-details')
 
-let dogDetails = document.createElement('div')
-dogDetails.setAttribute('class', 'dog-details')
-content.append(dogDetails)
+let descriptionTitle = document.createElement('h3')
+descriptionTitle.append('Description:')
+details.append(descriptionTitle)
+
+let descriptionContent = document.createElement('p')
+descriptionContent.append("This gentle dog is aloof toward her owner, and never comes when called. She always acts as though any stranger she meets will harm her, and dislikes other animals.")
+details.append(descriptionContent)
+
+let feedingTitle = document.createElement('h3')
+feedingTitle.append('Feeding times:')
+details.append(feedingTitle)
+
+let feedingTimesList = document.createElement('ul')
+
+let breakfast = document.createElement('li')
+breakfast.append("9:00 am")
+let lunch = document.createElement('li')
+lunch.append("12:00 pm")
+let dinner = document.createElement('li')
+dinner.append("5:00 pm")
+
+feedingTimesList.append(breakfast)
+feedingTimesList.append(lunch)
+feedingTimesList.append(dinner)
+details.append(feedingTimesList)
+
+dogContent.append(details)
+
+content.append(dogContent)
+
+
 
 
 
